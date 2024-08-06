@@ -29,8 +29,6 @@ function register(){
 
     localStorage.setItem("users", JSON.stringify(users));
 
-    name.value = "";
-    email.value = "";
-    password.value = "";
+   window.location = "login.html";
 
 }
