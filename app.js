@@ -4,6 +4,9 @@ function register(){
     var email = document.getElementById("r-email");
     var password = document.getElementById("r-password");
 
+   console.log(name.value, email.value, password.value);
+   
+
     var users = localStorage.getItem("users");
 
  if(users){
@@ -11,6 +14,10 @@ function register(){
  }else{
     users = [];
  }
+ 
+
+ console.log(users);
+ 
 
     var user = {
         name : name.value,
@@ -21,5 +28,9 @@ function register(){
     users.push(user);
 
     localStorage.setItem("users", JSON.stringify(users));
+
+    name.value = "";
+    email.value = "";
+    password.value = "";
 
 }
